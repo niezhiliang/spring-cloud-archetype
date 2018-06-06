@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: zuul-gateway
+  cloud:
+    client:
+      ipAddress: localhost
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: dev
+      label: master
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1234/eureka/

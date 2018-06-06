@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.6.RELEASE</version>
+    </parent>
+
+    <groupId>com.spring.cloud</groupId>
+    <artifactId>spring-cloud-archetype</artifactId>
+    <packaging>pom</packaging>
+    <version>v1.0.0</version>
+
+    <developers>
+        <developer>
+            <id>niezhiliang</id>
+            <name>niezhiliang</name>
+            <email>nzlsgg@163.com</email>
+            <url>https://github.com/niezhiliang</url>
+        </developer>
+    </developers>
+
+    <properties>
+        <spring-cloud.version>Dalston.SR2</spring-cloud.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <jjwt.version>0.7.0</jjwt.version>
+        <druid.version>1.0.11</druid.version>
+    </properties>
+
+    <modules>
+        <module>spring-cloud-eureka</module>
+        <module>spring-cloud-config</module>
+        <module>spring-cloud-gateway</module>
+        <module>spring-cloud-engine</module>
+        <module>spring-cloud-service</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+</project>

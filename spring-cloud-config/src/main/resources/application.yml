@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    client:
+      ipAddress: localhost
+    config:
+      server:
+        git:
+          uri: http://git.huluwa.cc/liumapp/electronic-contract-sign-online.git
+          username: nzl
+          password: nzl199595
+          search-paths: conf
+
+server:
+  port: 8877
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1234/eureka/
