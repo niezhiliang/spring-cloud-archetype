@@ -12,6 +12,13 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
 
+
+
+#mybatits配置
+mybatis:
+  configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mappers/*Mapper.xml
+
 #Redis配置
 liumapp:
   redis:

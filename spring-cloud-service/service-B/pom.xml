@@ -58,6 +58,11 @@
             <artifactId>redis-operator</artifactId>
             <version>v1.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.spring.cloud</groupId>
+            <artifactId>data-model</artifactId>
+            <version>v1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
