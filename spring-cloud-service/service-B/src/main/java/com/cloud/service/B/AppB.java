@@ -1,4 +1,4 @@
-package com.cloud.service.A;
+package com.cloud.service.B;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,8 +12,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-public class AppA {
+public class AppB{
   public static void main(String[] args) {
-    SpringApplication.run(AppA.class,args);
+    SpringApplication.run(AppB.class,args);
   }
 }

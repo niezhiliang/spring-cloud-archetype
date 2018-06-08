@@ -1,6 +1,6 @@
 spring:
   application:
-    name: server-a
+    name: server-b
   cloud:
     client:
       ipAddress: localhost

@@ -1,0 +1,9 @@
+suyu:
+  name: "Hello World!"
+
+#Redis配置
+liumapp:
+  redis:
+    port: 6379
+    hostName: 114.215.42.166
+    password: huluwa890TJ
