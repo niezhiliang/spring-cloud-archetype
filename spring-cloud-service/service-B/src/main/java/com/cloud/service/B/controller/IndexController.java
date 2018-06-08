@@ -1,8 +1,12 @@
 package com.cloud.service.B.controller;
 
+import com.liumapp.redis.operator.string.StringUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author NieZhiLiang
@@ -11,13 +15,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/")
 public class IndexController {
+  @Autowired
+  private StringUtil stringUtil;
 
   @Value("${suyu.name}")
   private String word;
 
   @RequestMapping(value = "index")
   public String index() {
-
-    return "this is form server B :"+word;
+    if (stringUtil.get("times") == null) {
+      //放入redis中 30分钟自动过期
+      stringUtil.set("times","1",30,TimeUnit.MINUTES);
+    }
+    String times =  stringUtil.get("times").toString();
+    stringUtil.set("times",Integer.parseInt(times)+1 + "",30,TimeUnit.MINUTES);
+    return "this is form server B : "+word +" Redis: "+times;
   }
 }
