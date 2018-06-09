@@ -17,3 +17,6 @@ zuul:
     server-a:
       serviceId: server-a
       path: /**
+    server-b:
+      serviceId: server-b
+      path: /**

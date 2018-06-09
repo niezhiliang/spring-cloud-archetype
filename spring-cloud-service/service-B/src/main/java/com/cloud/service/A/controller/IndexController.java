@@ -1,4 +1,4 @@
-package com.cloud.service.B.controller;
+package com.cloud.service.A.controller;
 
 import com.liumapp.redis.operator.string.StringUtil;
 import com.model.domain.User;
@@ -34,6 +34,6 @@ public class IndexController {
     String times =  stringUtil.get("times").toString();
     stringUtil.set("times",Integer.parseInt(times)+1 + "",30,TimeUnit.MINUTES);
     User firstData = userService.selectFirstData();
-    return "this is form server B : "+word +" Redis: "+times+"\n"+"MySql："+firstData;
+    return "this is form server A : "+word +" Redis: "+times+"\n"+"MySql："+firstData;
   }
 }

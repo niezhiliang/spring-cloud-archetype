@@ -1,4 +1,4 @@
-package com.cloud.service.B;
+package com.cloud.service.A;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
