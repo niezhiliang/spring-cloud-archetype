@@ -48,8 +48,12 @@ public class IndexController {
   private void write(String json, String path) {
     FileOutputStream outSTr = null;
     BufferedOutputStream Buff = null;
+    File file = new File(path);
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd  hh:mm:ss");
     try {
+      if (!file.exists()) {
+        file.createNewFile();
+      }
       outSTr = new FileOutputStream(new File(path));
       Buff = new BufferedOutputStream(outSTr);
         Buff.write((simpleDateFormat.format(new Date())+": "+json+"\r\n").getBytes());

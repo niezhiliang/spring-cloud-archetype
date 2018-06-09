@@ -1,6 +1,6 @@
 suyu:
   name: "Hello Service B!"
-  basedir: "/Users/huluwa110/Public/nzl/log.txt"
+  basedir: "/docker/personal/log.txt"
 
 
 
