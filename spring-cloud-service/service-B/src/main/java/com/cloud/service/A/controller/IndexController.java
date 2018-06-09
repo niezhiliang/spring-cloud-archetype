@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -25,6 +28,9 @@ public class IndexController {
   @Value("${suyu.name}")
   private String word;
 
+  @Value("${suyu.basedir}")
+  private String path;
+
   @RequestMapping(value = "index")
   public String index() {
     if (stringUtil.get("times") == null) {
@@ -34,6 +40,26 @@ public class IndexController {
     String times =  stringUtil.get("times").toString();
     stringUtil.set("times",Integer.parseInt(times)+1 + "",30,TimeUnit.MINUTES);
     User firstData = userService.selectFirstData();
-    return "this is form server A : "+word +" Redis: "+times+"\n"+"MySql："+firstData;
+    String json = "this is form server A : "+word +" Redis: "+times+"\n"+"MySql："+firstData;
+    write(json,path);
+    return json;
+  }
+
+  private void write(String json, String path) {
+    FileOutputStream outSTr = null;
+    BufferedOutputStream Buff = null;
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd  hh:mm:ss");
+    try {
+      outSTr = new FileOutputStream(new File(path));
+      Buff = new BufferedOutputStream(outSTr);
+        Buff.write((simpleDateFormat.format(new Date())+": "+json+"\r\n").getBytes());
+      Buff.flush();
+      Buff.close();
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
   }
 }

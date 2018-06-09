@@ -51,3 +51,6 @@ services:
     depends_on:
       - eureka
       - config
+    volumes:
+      - /Users/huluwa110/Public/nzl:/tmp/personal
+
