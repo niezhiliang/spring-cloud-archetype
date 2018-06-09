@@ -3,7 +3,7 @@
 <generatorConfiguration>
 
     <classPathEntry
-            location="/Users/suyu/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
+            location="/Users/huluwa110/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
 
     <context id="common-model" targetRuntime="MyBatis3">
 

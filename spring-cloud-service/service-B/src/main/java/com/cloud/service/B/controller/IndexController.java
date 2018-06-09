@@ -1,6 +1,8 @@
 package com.cloud.service.B.controller;
 
 import com.liumapp.redis.operator.string.StringUtil;
+import com.model.domain.User;
+import com.model.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +34,6 @@ public class IndexController {
     String times =  stringUtil.get("times").toString();
     stringUtil.set("times",Integer.parseInt(times)+1 + "",30,TimeUnit.MINUTES);
     User firstData = userService.selectFirstData();
-    return "this is form server B : "+word +" Redis: "+times+"\n"+firstData;
+    return "this is form server B : "+word +" Redis: "+times+"\n"+"MySql："+firstData;
   }
 }
