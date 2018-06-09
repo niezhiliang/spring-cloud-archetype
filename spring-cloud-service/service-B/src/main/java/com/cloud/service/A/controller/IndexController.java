@@ -41,7 +41,8 @@ public class IndexController {
     stringUtil.set("times",Integer.parseInt(times)+1 + "",30,TimeUnit.MINUTES);
     User firstData = userService.selectFirstData();
     String json = "this is form server A : "+word +" Redis: "+times+"\n"+"MySql："+firstData;
-    write(json,path);
+    //write(json,path);
+    appendMethod(path,json);
     return json;
   }
 
@@ -65,5 +66,24 @@ public class IndexController {
       e.printStackTrace();
     }
 
+  }
+
+  /**
+   * 追加文件：使用FileWriter
+   */
+  public void appendMethod(String fileName, String content) {
+    File file = new File(path);
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd  hh:mm:ss");
+    try {
+      if (!file.exists()) {
+        file.createNewFile();
+      }
+      //打开一个写文件器，构造函数中的第二个参数true表示以追加形式写文件
+      FileWriter writer = new FileWriter(fileName, true);
+      writer.write(simpleDateFormat.format(new Date())+": "+content);
+      writer.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 }

@@ -52,5 +52,5 @@ services:
       - eureka
       - config
     volumes:
-      - /Users/huluwa110/Public/nzl/personal:/docker/personal
+      - ./log:/docker/personal
 
