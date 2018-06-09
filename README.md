@@ -37,4 +37,14 @@
 - docker-compose.yml
 
     容器启动的配置管理,端口映射，容器与宿主机的文件夹映射
+    
+    
+```java
+    //这个api只读取了git上面的配置文件
+    http://127.0.0.1:8080/server-a/index
+    
+    //这个api读了数据库的数据，redis中的数据  还将得到的结果写入到了宿主机的/Users/huluwa110/Public/nzl/personal目录下面
+    http://127.0.0.1:8080/server-b/index
+    
+```
      
