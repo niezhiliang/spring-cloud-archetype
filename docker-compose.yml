@@ -52,5 +52,5 @@ services:
       - eureka
       - config
     volumes:
-      - ./log:/docker/personal
+      - ./logger:/docker/personal
 

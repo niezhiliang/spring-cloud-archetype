@@ -1,0 +1,6 @@
+2018-06-09  07:34:02: this is form server A : Hello Service B! Redis: 8
+MySql：User{id=1, userName='聂志良', userAge=23, userSex='男'}2018-06-09  07:34:06: this is form server A : Hello Service B! Redis: 9
+MySql：User{id=1, userName='聂志良', userAge=23, userSex='男'}2018-06-09  07:34:08: this is form server A : Hello Service B! Redis: 10
+MySql：User{id=1, userName='聂志良', userAge=23, userSex='男'}2018-06-09  07:34:10: this is form server A : Hello Service B! Redis: 11
+MySql：User{id=1, userName='聂志良', userAge=23, userSex='男'}2018-06-09  07:34:12: this is form server A : Hello Service B! Redis: 12
+MySql：User{id=1, userName='聂志良', userAge=23, userSex='男'}
