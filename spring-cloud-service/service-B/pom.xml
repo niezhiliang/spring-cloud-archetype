@@ -17,7 +17,7 @@
     </properties>
 
     <groupId>com.spring.cloud</groupId>
-    <artifactId>service-B</artifactId>
+    <artifactId>service-b</artifactId>
     <version>v1.0.0</version>
     <packaging>jar</packaging>
 

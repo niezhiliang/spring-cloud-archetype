@@ -1,0 +1,53 @@
+version: '2'
+
+services:
+  eureka:
+    image: niezhiliang/spring-cloud-eureka:v1.0.0
+    restart: always
+    container_name: eureka
+    hostname: eureka
+    ports:
+      - "1234:1234"
+
+  config:
+    image: niezhiliang/spring-cloud-config:v1.0.0
+    restart: always
+    container_name: config
+    hostname: config
+    ports:
+      - "8877:8877"
+    depends_on:
+      - eureka
+
+  gateway:
+    image: niezhiliang/spring-cloud-gateway:v1.0.0
+    restart: always
+    container_name: gateway
+    hostname: gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka
+      - config
+
+  service-a:
+    image: niezhiliang/service-a:v1.0.0
+    restart: always
+    container_name: service-a
+    hostname: service-a
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka
+      - config
+
+  service-b:
+    image: niezhiliang/service-b:v1.0.0
+    restart: always
+    container_name: service-b
+    hostname: service-b
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka
+      - config

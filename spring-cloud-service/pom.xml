@@ -12,8 +12,8 @@
     <artifactId>spring-cloud-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>servicec-A</module>
-        <module>service-B</module>
+        <module>service-a</module>
+        <module>service-b</module>
     </modules>
 
 

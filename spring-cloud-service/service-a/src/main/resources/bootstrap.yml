@@ -11,12 +11,8 @@ spring:
       profile: dev
       label: master
 server:
-  port: 8082
+  port: 8081
 
-
-mybatis:
-  configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath*:mappers/*Mapper.xml
 
 eureka:
   client:
