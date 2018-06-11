@@ -43,7 +43,7 @@
     //这个api只读取了git上面的配置文件
     http://127.0.0.1:8080/server-a/index
     
-    //这个api读了数据库的数据，redis中的数据  还将得到的结果写入到了宿主机的/Users/huluwa110/Public/nzl/personal目录下面
+    //这个api读了数据库的数据，redis中的数据  还将得到的结果写入到了宿主机的./logger下面
     http://127.0.0.1:8080/server-b/index
     
 ```
