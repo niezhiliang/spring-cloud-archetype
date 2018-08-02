@@ -17,7 +17,7 @@ public class RabbitController {
         if (str == null) {
             str = "输入的内容为空";
         }
-        amqpTemplate.convertAndSend("file-delete-queue", str);
+        amqpTemplate.convertAndSend("hello-queue", str);
         return "success";
     }
 }
