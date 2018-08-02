@@ -7,10 +7,10 @@ suyu:
 #数据库库的配置
 spring:
   rabbitmq:
-    host: 127.0.0.1
+    host: www.niezhiliang.com
     port: 5672
-    username: huluwa
-    password: huluwa110
+    username: springcloud
+    password: 123456
     publisher-confirms: true
     publisher-returns: true
   datasource:
@@ -31,5 +31,5 @@ mybatis:
 liumapp:
   redis:
     port: 6379
-    hostName: 114.215.42.166
+    hostName: www.niezhiliang.com
     password: huluwa890TJ
