@@ -1,4 +1,4 @@
-package com.cloud.service.A.controller;
+package com.cloud.service.B.controller;
 
 import com.liumapp.redis.operator.string.StringUtil;
 import com.model.domain.User;
