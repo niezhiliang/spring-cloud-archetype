@@ -14,7 +14,7 @@ spring:
     publisher-confirms: true
     publisher-returns: true
   datasource:
-    url: jdbc:mysql://www.niezhiliang.com:3306/suyu?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://www.niezhiliang.com:3306/test?useUnicode=true&characterEncoding=utf8
     username: root
     password: nzl199595
     type: com.alibaba.druid.pool.DruidDataSource
